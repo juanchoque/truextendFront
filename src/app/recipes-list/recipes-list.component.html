@@ -1,0 +1,37 @@
+
+  <div class="row">
+    <div class="col-md-4">
+        <button type="button" class="btn btn-success">Create Recipe</button>
+    </div>
+    <div class="col-md-4">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-info">
+            <input type="checkbox" autocomplete="off"> All cooking recipes
+          </label>
+          <label class="btn btn-success">
+            <input type="checkbox" autocomplete="off"> My cooking recipes
+          </label>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+  </div>
+  <hr>
+
+<div class="card border-primary mb-12" *ngFor="let recipe of recipes">
+  <div class="card-body">
+    <h4 class="card-title">{{recipe.name}}</h4>
+    <p class="card-text">{{recipe.preparation}}</p>
+
+    <div>
+        <button type="button" class="btn btn-primary">Delete</button>
+        <button type="button" class="btn btn-secondary">Edit</button>
+        <button type="button" class="btn btn-info">Info</button>
+    </div>
+  </div>
+</div>
+  
